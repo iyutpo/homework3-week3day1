@@ -196,8 +196,20 @@ table.tableImages tbody img {
     height: 150px;
 }
 
+span#clock {
+    font: Arial, Helvetica, sans-serif;
+    color: #125688;
+}
 
+span {
+    font: Arial, Helvetica, sans-serif;
+    color: #3a3a3a;
+}
 
+#timeofday {
+    text-align: center;
+    background: linear-gradient(rgba(251, 215, 139, 1) 0%, rgba(119, 213, 245, 1) 100%);
+}
 
 
 
