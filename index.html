@@ -80,6 +80,11 @@
                 var min = d.getMinutes();
                 var sec = d.getSeconds();
                 var ampm;
+                var utchr = d.getUTCHours();
+                var timeDiff;
+                var adjTimeDiff;
+                var timeZone = d.toLocaleTimeString('en-us', {timeZoneName: 'short'}).split(' ')[2];
+
                 if (sec < 10) {
                     sec = "0" + sec;
                 }
@@ -94,7 +99,7 @@
                 } else {
                     ampm = "AM";
                 }
-                var time = hr + ":" + min + ":" + sec + " " + ampm;
+                var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone[0] + timeZone[2];
                 document.getElementById('clock').innerText = time;
                 // Run time data function every second
                 setInterval(currentTime, 1000);
